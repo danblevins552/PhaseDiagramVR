@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Model Viewer</title>
+    <!-- Include A-Frame Library -->
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Add lighting -->
+      <a-light type="ambient" color="#888"></a-light>
+      <a-light type="directional" position="1 1 0"></a-light>
+      <a-light type="directional" position="-1 -1 0"></a-light>
+      
+      <!-- Load the 3D model -->
+      <a-entity 
+        gltf-model="static/tree2.glb" 
+        position="0 0 0" 
+        scale="1 1 1">
+      </a-entity>
+      
+      <a-camera 
+        position="0 1.6 5"
+        look-controls="enabled: false">
+      </a-camera>
+
+    </a-scene>
+  </body>
+</html>
